@@ -13,6 +13,7 @@ const addSchema = joi.object({
 const updateFavoriteSchema = joi.object({
   favorite: joi.boolean().required(),
 });
+// kbuibi
 
 module.exports = {
   addSchema,
