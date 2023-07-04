@@ -4,12 +4,7 @@ const validateBody = schema => {
   const func = (req, res, next) => {
     const { error } = schema.validate(req.body);
     if (error) {
-      next(
-        HttpError(
-          400,
-          `missing required ${error.message.slice(1, error.message.lastIndexOf('"'))} field`
-        )
-      );
+      next(HttpError(400, error.message));
     }
     next();
   };
@@ -17,3 +12,10 @@ const validateBody = schema => {
 };
 
 module.exports = validateBody;
+
+// next(
+//   HttpError(
+//     400,
+//     `missing required ${error.message.slice(1, error.message.lastIndexOf('"'))} field`
+//   )
+// );
