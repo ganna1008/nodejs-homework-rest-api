@@ -21,4 +21,5 @@ const existBodyFavorite = () => {
   };
   return func;
 };
+
 module.exports = { existBody, existBodyFavorite };
