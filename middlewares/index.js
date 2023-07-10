@@ -1,5 +1,5 @@
 const validateBody = require('./validateBody');
-const { existBody, existBodyFavorite, existBodyAvatar } = require('./existBody');
+const { existBody, existBodyFavorite, existBodyVerifyEmail } = require('./existBody');
 const isValidId = require('./isValidId');
 const authenticate = require('./authenticate');
 const upload = require('./upload');
@@ -11,5 +11,5 @@ module.exports = {
   existBodyFavorite,
   authenticate,
   upload,
-  existBodyAvatar,
+  existBodyVerifyEmail,
 };

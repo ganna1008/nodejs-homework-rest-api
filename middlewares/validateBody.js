@@ -12,10 +12,3 @@ const validateBody = schema => {
 };
 
 module.exports = validateBody;
-
-// next(
-//   HttpError(
-//     400,
-//     `missing required ${error.message.slice(1, error.message.lastIndexOf('"'))} field`
-//   )
-// );

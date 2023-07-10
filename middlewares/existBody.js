@@ -11,6 +11,17 @@ const existBody = () => {
   return func;
 };
 
+const existBodyVerifyEmail = () => {
+  const func = (req, res, next) => {
+    const body = req.body;
+    if (!Object.keys(body).includes('email')) {
+      next(HttpError(400, 'missing required field email'));
+    }
+    next();
+  };
+  return func;
+};
+
 const existBodyFavorite = () => {
   const func = (req, res, next) => {
     const body = req.body;
@@ -22,4 +33,4 @@ const existBodyFavorite = () => {
   return func;
 };
 
-module.exports = { existBody, existBodyFavorite };
+module.exports = { existBody, existBodyFavorite, existBodyVerifyEmail };
